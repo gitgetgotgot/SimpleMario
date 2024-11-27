@@ -1,6 +1,7 @@
 #include "Textures.h"
 #define STB_IMAGE_IMPLEMENTATION
-#include "include/stb_image.h"
+#include "stb_image.h"
+
 Textures::Textures() {}
 
 GLuint Textures::getTexture(int id) {

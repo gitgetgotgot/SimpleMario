@@ -1,5 +1,5 @@
 #pragma once
-#include "include/freeglut.h"
+#include "gl/freeglut.h"
 #include <vector>
 #include <string>
 using std::vector; using std::string;

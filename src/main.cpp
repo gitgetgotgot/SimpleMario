@@ -1,11 +1,8 @@
 #define MINIAUDIO_IMPLEMENTATION
 #include "miniaudio.h"
-#include "include/freeglut.h"
+#include "gl/freeglut.h"
 #include <iostream>
 #include <fstream>
-#include <Windows.h>
-#include <mmsystem.h>
-#include <mciapi.h>
 #include <vector>
 #include <thread>
 #include <chrono>
@@ -1670,16 +1667,16 @@ void mouseMoveAndPress(int X, int Y) {
 }
 
 void initialize() {
-	textures.loadTexture2D("bricks.png", 1); //0
-	textures.loadTexture2D("lucky_block.png", 1); //1
-	textures.loadTexture2D("mushroom_buff.png", 1); //2
-	textures.loadTexture2D("mushroom_enemy.png", 1); //3
-	textures.loadTexture2D("mario.png", 1); //4
-	textures.loadTexture2D("flower.png", 1); //5
-	textures.loadTexture2D("game_over.png", 1); //6
-	textures.loadTexture2D("turtle.png", 1); //7
-	textures.loadTexture2D("pipe.png", 1); //8
-	textures.loadTexture2D("coin.png", 1); //9
+	textures.loadTexture2D("..\\media\\bricks.png", 1); //0
+	textures.loadTexture2D("../media/lucky_block.png", 1); //1
+	textures.loadTexture2D("../media/mushroom_buff.png", 1); //2
+	textures.loadTexture2D("../media/mushroom_enemy.png", 1); //3
+	textures.loadTexture2D("../media/mario.png", 1); //4
+	textures.loadTexture2D("../media/flower.png", 1); //5
+	textures.loadTexture2D("../media/game_over.png", 1); //6
+	textures.loadTexture2D("../media/turtle.png", 1); //7
+	textures.loadTexture2D("../media/pipe.png", 1); //8
+	textures.loadTexture2D("../media/coin.png", 1); //9
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_ALPHA_TEST);
 	glAlphaFunc(GL_GREATER, 0.99);
@@ -1700,14 +1697,14 @@ void initialize() {
 	file.close();*/
 
 	ma_engine_init(NULL, &engine);
-	ma_sound_init_from_file(&engine, "smb_coin.wav", 0, NULL, NULL, &coin_sound);
-	ma_sound_init_from_file(&engine, "smb_breakblock.wav", 0, NULL, NULL, &break_sound);
-	ma_sound_init_from_file(&engine, "smb_jump-super.wav", 0, NULL, NULL, &jump_sound);
-	ma_sound_init_from_file(&engine, "smb_kick.wav", 0, NULL, NULL, &kick_sound);
+	ma_sound_init_from_file(&engine, "../media/smb_coin.wav", 0, NULL, NULL, &coin_sound);
+	ma_sound_init_from_file(&engine, "../media/smb_breakblock.wav", 0, NULL, NULL, &break_sound);
+	ma_sound_init_from_file(&engine, "../media/smb_jump-super.wav", 0, NULL, NULL, &jump_sound);
+	ma_sound_init_from_file(&engine, "../media/smb_kick.wav", 0, NULL, NULL, &kick_sound);
 	//ma_engine_play_sound(&engine, "01. Ground Theme.mp3", NULL);
-	ma_sound_init_from_file(&engine, "01. Ground Theme.mp3", 0, NULL, NULL, &ground_theme);
-	ma_sound_init_from_file(&engine, "smb_gameover.wav", 0, NULL, NULL, &over_sound);
-	ma_sound_init_from_file(&engine, "smb_stage_clear.wav", 0, NULL, NULL, &stage_clear);
+	ma_sound_init_from_file(&engine, "../media/01. Ground Theme.mp3", 0, NULL, NULL, &ground_theme);
+	ma_sound_init_from_file(&engine, "../media/smb_gameover.wav", 0, NULL, NULL, &over_sound);
+	ma_sound_init_from_file(&engine, "../media/smb_stage_clear.wav", 0, NULL, NULL, &stage_clear);
 }
 
 int main(int argc, char** argv) {
