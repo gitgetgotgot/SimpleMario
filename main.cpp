@@ -3,8 +3,6 @@
 #include "include/freeglut.h"
 #include <iostream>
 #include <fstream>
-#include <mmsystem.h>
-#include <mciapi.h>
 #include <vector>
 #include <thread>
 #include <chrono>
