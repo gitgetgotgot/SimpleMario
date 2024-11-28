@@ -1667,7 +1667,7 @@ void mouseMoveAndPress(int X, int Y) {
 }
 
 void initialize() {
-	textures.loadTexture2D("..\\media\\bricks.png", 1); //0
+	textures.loadTexture2D("../media/bricks.png", 1); //0
 	textures.loadTexture2D("../media/lucky_block.png", 1); //1
 	textures.loadTexture2D("../media/mushroom_buff.png", 1); //2
 	textures.loadTexture2D("../media/mushroom_enemy.png", 1); //3
