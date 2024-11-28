@@ -1,12 +1,12 @@
 #define MINIAUDIO_IMPLEMENTATION
 #include "miniaudio.h"
-#include "gl/freeglut.h"
+#include "GL/freeglut.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <thread>
 #include <chrono>
-#include "Textures.h"
+#include "textures.h"
 
 constexpr auto PI = 3.14159;
 constexpr auto FPS = 60.0;
